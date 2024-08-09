@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Our Website</h1>
+    </header>
+    <main>
+        <p>This is the home page. Explore our site to learn more about what we offer.</p>
+        <button class="custom-button">Learn More</button>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-item">
+                <img src="1.png" alt="Image 1" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="2.png" alt="Image 2" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <video src="video.webm" controls class="lightbox-trigger"></video>
+            </div>
+            <div class="gallery-item">
+                <img src="3.png" alt="Image 3" class="lightbox-trigger">
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox for slideshow -->
+    <div id="lightbox" style="display:none;">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Slideshow Image">
+            <video id="lightbox-video" controls style="display:none;"></video>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

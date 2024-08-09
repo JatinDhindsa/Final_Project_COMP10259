@@ -1,0 +1,148 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+  
+  nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  nav ul li a:hover {
+    color: white;
+  }
+  
+  button, input[type="button"], input[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  button::after, input[type="button"]::after, input[type="submit"]::after {
+    content: "!";
+  }
+  
+  button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    opacity: 0.8;
+  }
+  
+  form#contact-form {
+    border: 2px dashed #000;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  form#contact-form:hover {
+    background-color: #e8e8e8;
+  }
+  
+  form#contact-form input, form#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form#contact-form button {
+    width: 100%;
+  }
+  
+  .animated-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animated-header-contact {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: bounceIn 1s ease-out;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  p {
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+  }
+  
+  p:hover {
+    color: #FF5722;
+    background-color: #f0f0f0;
+  }
+
+/* Lightbox Styles */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+#lightbox .lightbox-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#lightbox img, #lightbox video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

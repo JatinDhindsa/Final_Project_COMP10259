@@ -1,0 +1,129 @@
+// Variables for easy color management
+$menu-text-color: yellow;
+$menu-text-hover-color: white;
+$button-background-color: red;
+$form-border-style: dashed;
+
+// Style for Navigation Bar
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+
+    li {
+      a {
+        color: $menu-text-color;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+
+        &:hover {
+          color: $menu-text-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// Style for Buttons
+button, input[type="button"], input[type="submit"] {
+  background-color: $button-background-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &::after {
+    content: "!";
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Style for Contact Us Form
+form#contact-form {
+  border: 2px $form-border-style #000;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #e8e8e8;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+// Header Animation for index.html
+.animated-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Header Animation for contact.html
+.animated-header-contact {
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Transition for paragraphs
+p {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px;
+}
+
+p:hover {
+  color: #FF5722;
+  background-color: #f0f0f0;
+}
